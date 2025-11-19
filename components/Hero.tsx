@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
             </span>
-            Open to SDE-2 Opportunities
+            Open for new opportunities
           </div>
           
           <h1 className="text-5xl md:text-8xl font-bold text-zinc-100 tracking-tighter mb-6">
