@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X, Code2, FileText } from 'lucide-react';
 import { RESUME_DATA } from '../constants';
 
 export const Header: React.FC = () => {
@@ -63,9 +64,17 @@ export const Header: React.FC = () => {
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold text-accent-400 hover:text-accent-300 transition-colors"
+              className="text-sm font-semibold text-zinc-400 hover:text-zinc-100 transition-colors"
             >
               GitHub
+            </a>
+             <a 
+              href={RESUME_DATA.profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-accent-400 hover:text-accent-300 transition-colors flex items-center gap-1"
+            >
+              Resume
             </a>
           </nav>
 
@@ -93,12 +102,23 @@ export const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <div className="h-px bg-zinc-800 w-full my-4"></div>
             <a 
               href={githubUrl} 
               target="_blank"
-              className="text-2xl font-medium text-accent-500"
+              rel="noopener noreferrer"
+              className="text-2xl font-medium text-zinc-300 hover:text-white"
             >
               GitHub Profile
+            </a>
+            <a 
+              href={RESUME_DATA.profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl font-medium text-accent-500 flex items-center gap-2"
+            >
+              <FileText size={24} />
+              View Resume
             </a>
           </div>
         </div>

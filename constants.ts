@@ -1,3 +1,4 @@
+
 import { ResumeData } from './types';
 
 export const RESUME_DATA: ResumeData = {
@@ -8,6 +9,7 @@ export const RESUME_DATA: ResumeData = {
     phone: "7660093555",
     email: "chilamakuri604@gmail.com",
     summary: "Backend-focused Software Engineer with professional experience architecting scalable microservices. Proficient in optimizing high-throughput systems (10k+ ops/sec) using Spring Boot, Kafka, and Redis. Deeply invested in System Design, clean architecture, and cloud-native solutions.",
+    resumeUrl: "https://drive.google.com/file/d/1IqwJH_-WKNbAWUPSNG_8k-fEteBMvYm5/view?usp=sharing", // Ensure you upload a file named resume.pdf to your public folder
     socials: [
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/chilmakurinarasimhasai/" }, 
       { platform: "GitHub", url: "https://github.com/narasimhaChilmakuri" },

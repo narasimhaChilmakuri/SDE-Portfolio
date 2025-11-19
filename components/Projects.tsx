@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RESUME_DATA } from '../constants';
 import { Github, ArrowUpRight } from 'lucide-react';
@@ -22,7 +23,7 @@ export const Projects: React.FC = () => {
               rel="noopener noreferrer" 
               className="text-sm font-medium text-zinc-400 hover:text-zinc-100 flex items-center gap-2 transition-colors"
             >
-              View GitHub Profile <ArrowRightIcon />
+              View GitHub Profile <ArrowUpRight size={16} />
             </a>
           </div>
 
@@ -35,8 +36,9 @@ export const Projects: React.FC = () => {
                     <h3 className="text-xl font-bold text-zinc-100 group-hover:text-accent-400 transition-colors">
                       {project.title}
                     </h3>
+                    {/* Project link could go here if specific repo links were available */}
                     <div className="flex gap-3">
-                       <a href="#" className="text-zinc-500 hover:text-zinc-200 transition-colors"><Github size={18} /></a>
+                       <div className="text-zinc-600 transition-colors"><Github size={18} /></div>
                     </div>
                   </div>
 
@@ -64,7 +66,3 @@ export const Projects: React.FC = () => {
     </section>
   );
 };
-
-const ArrowRightIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-);

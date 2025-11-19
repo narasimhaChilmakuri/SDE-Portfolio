@@ -1,3 +1,4 @@
+
 export interface SocialLink {
   platform: string;
   url: string;
@@ -45,6 +46,7 @@ export interface ResumeData {
     phone: string;
     email: string;
     summary: string;
+    resumeUrl: string;
     socials: SocialLink[];
   };
   experience: ExperienceItem[];

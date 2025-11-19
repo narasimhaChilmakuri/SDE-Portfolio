@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { RESUME_DATA } from '../constants';
-import { ArrowRight, Github, Linkedin, Trophy } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Trophy, FileDown } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const { profile } = RESUME_DATA;
@@ -23,7 +24,7 @@ export const Hero: React.FC = () => {
             Open to SDE-2 Opportunities
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold text-zinc-100 tracking-tighter mb-6">
+          <h1 className="text-5xl md:text-8xl font-bold text-zinc-100 tracking-tighter mb-6">
             {profile.name.split(' ')[0]}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-400 to-zinc-600"> {profile.name.split(' ')[1]}</span>
           </h1>
@@ -40,12 +41,21 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
               href="#projects" 
-              className="px-8 py-3.5 bg-zinc-100 text-zinc-950 font-semibold rounded-full hover:bg-white transition-all flex items-center gap-2"
+              className="w-full sm:w-auto px-8 py-3.5 bg-zinc-100 text-zinc-950 font-semibold rounded-full hover:bg-white transition-all flex items-center justify-center gap-2"
             >
               View Work <ArrowRight size={18} />
             </a>
+
+            <a 
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-3.5 bg-zinc-900 border border-zinc-800 text-zinc-300 font-medium rounded-full hover:bg-zinc-800 hover:text-white transition-all flex items-center justify-center gap-2"
+            >
+              Resume <FileDown size={18} />
+            </a>
             
-            <div className="flex items-center gap-4 sm:ml-4">
+            <div className="flex items-center gap-4 sm:ml-4 mt-4 sm:mt-0">
               {profile.socials.map((social) => (
                 <a 
                   key={social.platform}
