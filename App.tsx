@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -14,9 +15,10 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Skills />
-        <Projects />
+        {/* Optimized Order: Experience -> Projects -> Skills -> About -> Contact */}
         <Experience />
+        <Projects />
+        <Skills />
         <About />
         <Contact />
       </main>

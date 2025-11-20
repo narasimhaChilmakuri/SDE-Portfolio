@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
           
           <h1 className="text-5xl md:text-8xl font-bold text-zinc-100 tracking-tighter mb-6">
             {profile.name.split(' ')[0]}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-400 to-zinc-600"> {profile.name.split(' ')[1]}</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 to-zinc-500"> {profile.name.split(' ')[1]}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-zinc-400 font-light mb-8 tracking-wide">

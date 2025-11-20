@@ -9,7 +9,7 @@ export const RESUME_DATA: ResumeData = {
     phone: "7660093555",
     email: "chilamakuri604@gmail.com",
     summary: "Backend-focused Software Engineer with professional experience architecting scalable microservices. Proficient in optimizing high-throughput systems (10k+ ops/sec) using Spring Boot, Kafka, and Redis. Deeply invested in System Design, clean architecture, and cloud-native solutions.",
-    resumeUrl: "https://drive.google.com/file/d/1IqwJH_-WKNbAWUPSNG_8k-fEteBMvYm5/view?usp=sharing", // Ensure you upload a file named resume.pdf to your public folder
+    resumeUrl: "https://drive.google.com/file/d/1IqwJH_-WKNbAWUPSNG_8k-fEteBMvYm5/view?usp=sharing",
     socials: [
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/chilmakurinarasimhasai/" }, 
       { platform: "GitHub", url: "https://github.com/narasimhaChilmakuri" },
@@ -41,64 +41,65 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Zoho Corporation",
-      role: "Software Engineering Intern",
+      role: "Summer Software Engineering Intern",
       location: "Chennai",
       period: "Mar 2022 – May 2022",
       points: [
-        "Engineered core modules for a high-traffic web application using Java Servlets and JSP, delivering 3 major features ahead of schedule.",
+        "Engineered core modules for a high-traffic web application using Java Servlets and JSP, delivering three major features ahead of schedule.",
         "Implemented robust CI/CD pipelines and automated testing strategies, streamlining the deployment process and reducing regression bugs."
       ]
     }
   ],
   projects: [
     {
-      title: "Distributed Connections System",
+      title: "Bandhan",
       status: "Production Ready",
-      githubUrl: "https://github.com/narasimhaChilmakuri",
+      githubUrl: "https://github.com/narasimhaChilmakuri/bandhan-x",
+      icon: "🌐",
       description: [
-        "Designed an event-driven microservices ecosystem handling 10,000+ real-time events/sec using Kafka and Spring Boot.",
-        "Solved complex graph traversal problems for user connections using Neo4j, optimizing 2nd and 3rd degree connection queries.",
-        "Implemented multi-layer caching with Redis to reduce database load by 60% during peak traffic bursts."
+        "Architected a LinkedIn-like distributed connections platform capable of handling high-concurrency user graph operations.",
+        "Optimized 2nd and 3rd-degree connection queries using Neo4j, reducing traversal time by 40% for large datasets.",
+        "Implemented an event-driven architecture with Kafka to handle real-time feed updates and notifications asynchronously."
       ],
-      techStack: ["Spring Boot", "Kafka", "Neo4j", "Redis", "Docker", "Microservices"]
+      techStack: ["Spring Boot", "Kafka", "Neo4j", "Redis", "Docker"]
     },
     {
-      title: "High-Performance Invoice Engine",
+      title: "Scalable URL Shortener",
       status: "Completed",
-      githubUrl: "https://github.com/narasimhaChilmakuri",
+      icon: "🔗",
       description: [
-        "Developed a low-latency billing engine capable of processing complex discount rules via a custom Object-Oriented rule engine.",
-        "Engineered real-time status streaming using Server-Sent Events (SSE), ensuring sub-second updates for client dashboards.",
-        "Ensured system reliability through comprehensive unit and integration testing, achieving 90%+ code coverage."
+        "Developed a high-performance URL shortening service utilizing Base62 encoding and the Snowflake algorithm for collision-free unique IDs.",
+        "Engineered a caching layer using Redis to serve redirection requests with sub-millisecond latency, significantly reducing database load.",
+        "Designed the system for horizontal scalability, supporting high throughput for millions of active short links."
       ],
-      techStack: ["Java", "Spring Boot", "SSE", "Design Patterns", "PostgreSQL"]
+      techStack: ["Java", "Spring Boot", "Redis", "PostgreSQL", "System Design"]
     },
     {
-      title: "Automated Layout Optimization Tool",
+      title: "Smart Expense Splitter",
       status: "Completed",
-      githubUrl: "https://github.com/narasimhaChilmakuri",
+      icon: "💸",
       description: [
-        "Built a desktop-based image processing tool integrating OpenCV for automated layout analysis and optimization.",
-        "Leveraged JavaFX to create a responsive, hardware-accelerated UI capable of rendering high-resolution schematics smoothly.",
-        "Reduced manual layout planning time by approximately 70% for end-users."
+        "Built a backend engine for tracking shared group expenses, featuring a graph-based debt simplification algorithm to minimize transaction volume.",
+        "Handled complex edge cases including unequal splits and multi-currency support, utilizing optimistic locking for data consistency.",
+        "Designed efficient RESTful APIs for group management, activity logging, and automated settlement calculations."
       ],
-      techStack: ["JavaFX", "OpenCV", "Desktop UI", "Algorithms"]
+      techStack: ["Java", "Spring Boot", "MySQL", "DSA", "Graph Algorithms"]
     },
     {
-      title: "Scalable Booking Platform",
+      title: "Integrated Tourism Platform",
       status: "In Development",
-      githubUrl: "https://github.com/narasimhaChilmakuri",
+      icon: "🗺️",
       description: [
-        "Architecting a modular backend supporting 10,000+ daily active users with stateless JWT authentication.",
-        "Implementing database sharding strategies and read-replicas to handle read-heavy search workloads.",
-        "Securing payment processing workflows with idempotent API design to prevent duplicate transactions."
+        "Developing a comprehensive marketplace aggregating travel packages, accommodation, and verified local guide services.",
+        "Building a personalized itinerary generator that suggests food spots and attractions based on geolocation and user preferences.",
+        "Architecting a modular microservices backend to handle bookings, payments, and vendor management with high reliability."
       ],
-      techStack: ["Spring Boot", "MySQL", "REST APIs", "System Design"]
+      techStack: ["Spring Boot", "Microservices", "Kafka", "PostGIS", "React"]
     }
   ],
   education: [
     {
-      institution: "Veltech University",
+      institution: "Vel Tech University",
       location: "Chennai",
       degree: "B.Tech in Computer Science",
       period: "2019 - 2023",
@@ -113,7 +114,7 @@ export const RESUME_DATA: ResumeData = {
   skills: [
     { 
       name: "System Design & Backend", 
-      skills: ["Java 17+", "Spring Boot", "Microservices", "Kafka", "Redis", "System Design", "AWS (Basic)", "Docker", "Kubernetes"] 
+      skills: ["Java", "Spring Boot", "Microservices", "Kafka", "Redis", "System Design", "AWS (Basic)", "Docker", "Kubernetes"] 
     },
     { 
       name: "Data & Storage", 

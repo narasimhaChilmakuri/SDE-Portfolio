@@ -10,7 +10,7 @@ export const Contact: React.FC = () => {
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-zinc-100 mb-6 tracking-tight">Ready to collaborate?</h2>
         <p className="text-zinc-500 mb-10 max-w-lg mx-auto">
-          I'm currently open to SDE-2 roles and challenging backend projects.
+          I'm currently open to new roles and challenging backend projects.
         </p>
         
         <a 

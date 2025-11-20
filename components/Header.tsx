@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code2, FileText } from 'lucide-react';
-import { RESUME_DATA } from '../constants';
+import { Menu, X, Code2 } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,15 +24,14 @@ export const Header: React.FC = () => {
     }
   };
 
+  // Optimized order: Experience -> Projects -> Skills -> About -> Contact
   const navLinks = [
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
-
-  const githubUrl = RESUME_DATA.profile.socials.find(s => s.platform === 'GitHub')?.url || '#';
 
   return (
     <>
@@ -42,7 +40,7 @@ export const Header: React.FC = () => {
       >
         <div className={`
           relative flex items-center justify-between md:justify-center
-          w-full md:w-auto md:min-w-[600px]
+          w-full md:w-auto md:min-w-[500px]
           px-6 py-3 
           rounded-2xl border 
           transition-all duration-300
@@ -59,34 +57,17 @@ export const Header: React.FC = () => {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
+                className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors rounded-lg hover:bg-zinc-800/50"
               >
                 {link.name}
               </a>
             ))}
-            <div className="w-px h-4 bg-zinc-700 mx-2"></div>
-            <a 
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-zinc-400 hover:text-zinc-100 transition-colors"
-            >
-              GitHub
-            </a>
-             <a 
-              href={RESUME_DATA.profile.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-accent-400 hover:text-accent-300 transition-colors flex items-center gap-1"
-            >
-              Resume
-            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -113,24 +94,6 @@ export const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <div className="h-px bg-zinc-800 w-full my-4"></div>
-            <a 
-              href={githubUrl} 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl font-medium text-zinc-300 hover:text-white"
-            >
-              GitHub Profile
-            </a>
-            <a 
-              href={RESUME_DATA.profile.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl font-medium text-accent-500 flex items-center gap-2"
-            >
-              <FileText size={24} />
-              View Resume
-            </a>
           </div>
         </div>
       )}
