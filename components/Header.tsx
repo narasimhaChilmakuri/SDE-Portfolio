@@ -15,6 +15,16 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   const navLinks = [
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
@@ -54,6 +64,7 @@ export const Header: React.FC = () => {
               <a 
                 key={link.name} 
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
               >
                 {link.name}
@@ -97,7 +108,7 @@ export const Header: React.FC = () => {
                 key={link.name} 
                 href={link.href}
                 className="text-2xl font-medium text-zinc-300 hover:text-accent-400 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
               </a>

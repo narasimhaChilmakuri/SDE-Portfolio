@@ -17,17 +17,19 @@ export const Skills: React.FC = () => {
             {skills.map((category) => (
               <div 
                 key={category.name} 
-                className="bg-zinc-900/20 border border-zinc-800/50 rounded-2xl p-8 hover:border-zinc-700/50 hover:bg-zinc-900/30 transition-all duration-300"
+                className="group bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 hover:border-zinc-700 transition-all duration-300 flex flex-col"
               >
-                <h3 className="text-sm font-bold text-zinc-100 mb-6 tracking-wide flex items-center gap-3">
-                  <span className="w-1 h-4 bg-accent-500 rounded-full shadow-[0_0_8px_rgba(99,102,241,0.4)]"></span>
-                  {category.name}
-                </h3>
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-zinc-800/50">
+                  <span className="w-1 h-5 bg-accent-500 rounded-full shadow-[0_0_8px_rgba(99,102,241,0.4)]"></span>
+                  <h3 className="text-lg font-semibold text-zinc-100 tracking-wide">
+                    {category.name}
+                  </h3>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <span 
                       key={skill} 
-                      className="px-3 py-1.5 bg-zinc-950/50 border border-zinc-800 rounded-md text-sm text-zinc-400 hover:text-zinc-100 hover:border-accent-500/30 hover:bg-zinc-900 transition-colors cursor-default"
+                      className="px-3 py-1.5 bg-zinc-950/50 border border-zinc-800 rounded-lg text-sm text-zinc-400 group-hover:text-zinc-200 group-hover:border-zinc-700/50 transition-colors cursor-default"
                     >
                       {skill}
                     </span>

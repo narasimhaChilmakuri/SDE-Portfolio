@@ -18,6 +18,7 @@ export interface ProjectItem {
   description: string[];
   techStack: string[];
   status?: string;
+  githubUrl?: string;
 }
 
 export interface EducationItem {

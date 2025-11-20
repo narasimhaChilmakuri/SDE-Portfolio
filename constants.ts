@@ -54,6 +54,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Distributed Connections System",
       status: "Production Ready",
+      githubUrl: "https://github.com/narasimhaChilmakuri",
       description: [
         "Designed an event-driven microservices ecosystem handling 10,000+ real-time events/sec using Kafka and Spring Boot.",
         "Solved complex graph traversal problems for user connections using Neo4j, optimizing 2nd and 3rd degree connection queries.",
@@ -64,6 +65,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "High-Performance Invoice Engine",
       status: "Completed",
+      githubUrl: "https://github.com/narasimhaChilmakuri",
       description: [
         "Developed a low-latency billing engine capable of processing complex discount rules via a custom Object-Oriented rule engine.",
         "Engineered real-time status streaming using Server-Sent Events (SSE), ensuring sub-second updates for client dashboards.",
@@ -74,6 +76,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Automated Layout Optimization Tool",
       status: "Completed",
+      githubUrl: "https://github.com/narasimhaChilmakuri",
       description: [
         "Built a desktop-based image processing tool integrating OpenCV for automated layout analysis and optimization.",
         "Leveraged JavaFX to create a responsive, hardware-accelerated UI capable of rendering high-resolution schematics smoothly.",
@@ -84,6 +87,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Scalable Booking Platform",
       status: "In Development",
+      githubUrl: "https://github.com/narasimhaChilmakuri",
       description: [
         "Architecting a modular backend supporting 10,000+ daily active users with stateless JWT authentication.",
         "Implementing database sharding strategies and read-replicas to handle read-heavy search workloads.",

@@ -36,9 +36,19 @@ export const Projects: React.FC = () => {
                     <h3 className="text-xl font-bold text-zinc-100 group-hover:text-accent-400 transition-colors">
                       {project.title}
                     </h3>
-                    {/* Project link could go here if specific repo links were available */}
+                    
                     <div className="flex gap-3">
-                       <div className="text-zinc-600 transition-colors"><Github size={18} /></div>
+                      {project.githubUrl && (
+                        <a 
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-zinc-400 hover:text-white transition-colors p-1"
+                          title="View Code"
+                        >
+                           <Github size={20} />
+                        </a>
+                      )}
                     </div>
                   </div>
 
